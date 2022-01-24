@@ -11,3 +11,123 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content{
+  flex-grow: 1;
+}
+
+.shopping_cart {
+  position: fixed;
+  right: 1rem;
+  top: 0.2rem;
+  z-index: 2;
+  color: white;
+  background-color: hsl(291, 47%, 60%);
+  border-radius: 3px;
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.247);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.shopping_cart:hover {
+  background-color: hsl(291, 47%, 55%);
+}
+
+@media (min-width: 767px) {
+  .shopping_cart {
+    position: fixed;
+    right: 3em;
+    top: 0.2rem;
+    z-index: 2;
+    color: white;
+    background-color: hsl(291, 47%, 60%);
+    border-radius: 3px;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.247);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
+
+.cart-quantity {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 30px;
+  height: 30px;  
+  background-color: cadetblue;
+  border-radius: 50%;
+  bottom: -10px;
+  right: -20px;
+}
+
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 50vw;
+  max-width: 95%;
+  z-index: 3;
+}
+
+.basket-close-cross {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+.basket-close-cross:hover {
+  background-color:hsl(291, 47%, 55%);
+}
+
+.basket-delete {
+  cursor: pointer;
+}
+
+.add-sub {
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: hsl(174, 63%, 40%);
+  border-radius: 3px;
+}
+
+#toast-container {
+  top: 3rem !important;
+  animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;
+    transform: scale(0);}
+  to {opacity: 1;
+    transform: scale(1);}
+}
+
+.checkout-btn {
+  background-color: white !important;
+  color: hsl(174, 63%, 40%) !important;
+  border-color: white !important;
+  cursor: pointer !important;
+
+}
