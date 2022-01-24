@@ -19,7 +19,7 @@ function GoodsItem(props) {
                 </div>
                 <div className="card-action">
                     <button className="btn" onClick={() => orderHandler(item)}>Buy</button>
-                    <span className="right">{price.regularPrice}</span>
+                    <span className="right">{price.regularPrice} PLN</span>
                 </div>
             </div>
 }
